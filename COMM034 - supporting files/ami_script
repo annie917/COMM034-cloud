@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt install python-pip -y
+sudo pip install --upgrade pip
+sudo pip install boto
+sudo pip install awscli
+sudo pip install --upgrade google-cloud-datastore
+echo 'finished' >> /tmp/message.txt

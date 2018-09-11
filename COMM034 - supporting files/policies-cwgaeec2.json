@@ -1,0 +1,77 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1491380613000",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateInstanceProfile",
+                "iam:AddRoleToInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DeleteInstanceProfile"
+            ],
+            "Resource": [
+                "arn:aws:iam::497930745979:instance-profile/inst-profile"
+            ]
+        },
+        {
+            "Sid": "Stmt1491382421000",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:PassRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:DetachRolePolicy"
+            ],
+            "Resource": [
+                "arn:aws:iam::497930745979:role/s3-role"
+            ]
+        },
+        {
+            "Sid": "Stmt1491386009000",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:RunInstances"
+            ],
+            "Resource": [
+                "arn:aws:ec2:eu-west-2:497930745979:instance/*",
+                "arn:aws:ec2:eu-west-2:497930745979:key-pair/euwest2",
+                "arn:aws:ec2:eu-west-2:497930745979:security-group/sg-74de0e1d",
+                "arn:aws:ec2:eu-west-2:497930745979:volume/*",
+                "arn:aws:ec2:eu-west-2::image/ami-f1d7c395",
+                "arn:aws:ec2:eu-west-2::image/ami-a5dfc8c1",
+                "arn:aws:iam::497930745979:instance-profile/inst-profile",
+                "arn:aws:ec2:eu-west-2:497930745979:network-interface/*",
+                "arn:aws:ec2:eu-west-2:497930745979:subnet/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1491392402000",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:TerminateInstances"
+            ],
+            "Resource": [
+                "arn:aws:ec2:eu-west-2:497930745979:instance/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1494339577000",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+/* CSS layout */
+
+/* Space between input elements */
+input, textarea, select {
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 18px;
+}
+
+.btn-md {
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 3.0em;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 1.75em;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.table {
+  margin-bottom: 30px;
+}
+
+.jumbotron {
+  margin-top: 30px;
+}
+
+.chart {
+  width: 675px;
+  height: 375px;
+}
